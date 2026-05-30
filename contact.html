@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Contact Rukman Palta for frontend developer roles." />
+    <title>Contact | Rukman Palta</title>
+    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Main navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">RP</span><span class="brand-text">Rukman</span></a>
+        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
+        <ul class="nav-menu" id="primary-navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="component-lab.html">Component Lab</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero section">
+        <div class="section-center narrow">
+          <p class="eyebrow">Contact</p>
+          <h1>Let’s connect about frontend developer opportunities.</h1>
+          <p>
+            Use the form below to collect recruiter or hiring-manager messages in this static portfolio demo.
+            For real email delivery, connect the form to Formspree, Netlify Forms, or EmailJS before publishing.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section--muted" id="contact-options">
+        <div class="section-center contact-grid">
+          <article class="contact-card">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <h2>Email</h2>
+            <p>Email me directly for frontend developer opportunities.</p>
+            <a class="text-link" href="mailto:rukmanpalta@gmail.com">rukmanpalta@gmail.com</a>
+          </article>
+          <article class="contact-card">
+            <i class="fab fa-linkedin" aria-hidden="true"></i>
+            <h2>LinkedIn</h2>
+            <p>Connect with me on LinkedIn.</p>
+            <a class="text-link" href="https://www.linkedin.com/in/rukmanpalta/" target="_blank" rel="noopener noreferrer">linkedin.com/in/rukmanpalta</a>
+          </article>
+          <article class="contact-card">
+            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+            <h2>Location</h2>
+            <p>Based in South Lyon, Michigan.</p>
+            <span class="text-link">South Lyon, Michigan</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="contact-form-section">
+        <div class="section-center contact-layout">
+          <div>
+            <p class="eyebrow">Contact Form</p>
+            <h2>Send a message about a frontend role.</h2>
+            <p>
+              This form is client-side validated and ready to connect to a form service.
+              It currently shows a success message so recruiters can test the interaction.
+            </p>
+          </div>
+
+          <form class="portfolio-form" id="contact-form" data-portfolio-form novalidate>
+            <div class="form-row">
+              <label class="form-field" for="first-name">
+                <span>First name</span>
+                <input id="first-name" name="firstName" type="text" autocomplete="given-name" required />
+              </label>
+              <label class="form-field" for="last-name">
+                <span>Last name</span>
+                <input id="last-name" name="lastName" type="text" autocomplete="family-name" required />
+              </label>
+            </div>
+
+            <label class="form-field" for="email">
+              <span>Email address</span>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </label>
+
+            <label class="form-field" for="company">
+              <span>Company or role</span>
+              <input id="company" name="company" type="text" placeholder="Frontend Developer, AEM Developer, Recruiter, etc." />
+            </label>
+
+            <label class="form-field" for="message">
+              <span>Message</span>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or next steps." required></textarea>
+            </label>
+
+            <button class="btn btn--primary" type="submit">Submit Message</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-center cta-panel">
+          <p class="eyebrow">Availability</p>
+          <h2>Frontend Developer roles: AEM, JavaScript, TypeScript, HTML, CSS/SCSS, React fundamentals.</h2>
+          <p>
+            I am especially interested in roles where I can build responsive web experiences, collaborate with
+            design/product/QA teams, improve accessibility, and support production releases.
+          </p>
+          <a class="btn btn--primary" href="projects.html">Review My Work</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="section-center footer-grid">
+        <p>&copy; <span id="year"></span> Rukman Palta. Frontend Developer Portfolio.</p>
+        <ul class="footer-links" aria-label="Footer navigation"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="projects.html">Projects</a></li></ul>
+      </div>
+    </footer>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

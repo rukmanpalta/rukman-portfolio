@@ -1,0 +1,56 @@
+.page-hero {
+  background:
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.16), transparent 32rem),
+    linear-gradient(180deg, var(--color-primary-050), var(--color-white));
+}
+
+.stats-section {
+  padding-block: var(--space-6);
+  background: var(--color-primary-900);
+}
+
+.stats-section .stat-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.stats-section .stat-card strong,
+.stats-section .stat-card span {
+  color: var(--color-white);
+}
+
+.cards-demo-grid .demo-card,
+.skill-card,
+.contact-card,
+.project-card,
+.stat-card {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.cards-demo-grid .demo-card:hover,
+.skill-card:hover,
+.contact-card:hover,
+.project-card:hover,
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.contact-card {
+  min-height: 15rem;
+}
+
+.cta-panel {
+  background: var(--color-primary-050);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

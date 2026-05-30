@@ -1,0 +1,325 @@
+/*
+  Responsive polish layer
+  -----------------------
+  This file is intentionally imported last so it can fix layout edge cases
+  across the full portfolio without changing each component's base styling.
+*/
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+
+body {
+  overflow-wrap: anywhere;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a,
+button,
+code {
+  overflow-wrap: anywhere;
+}
+
+code {
+  white-space: normal;
+}
+
+.section-center,
+.navbar,
+.secondary-nav {
+  width: min(100% - clamp(1rem, 5vw, 2rem), var(--max-width));
+}
+
+.navbar {
+  position: relative;
+}
+
+.brand {
+  min-width: 0;
+}
+
+.brand-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.secondary-nav {
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.secondary-nav a {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.hero-grid,
+.split-grid,
+.stats-grid,
+.project-grid,
+.skills-grid,
+.cards-demo-grid,
+.contact-grid {
+  min-width: 0;
+}
+
+.hero-content,
+.hero-card,
+.project-card,
+.skill-card,
+.stat-card,
+.demo-card,
+.contact-card,
+.cta-panel,
+.banner-demo,
+.footer-demo-panel,
+.timeline-list article {
+  min-width: 0;
+}
+
+.hero-card img,
+.project-card img,
+.rounded-image {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+.btn {
+  text-align: center;
+  white-space: normal;
+}
+
+.banner-demo .btn,
+.footer-demo-panel .btn {
+  justify-self: start;
+}
+
+.table-wrap {
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.info-table {
+  width: 100%;
+}
+
+.info-table th,
+.info-table td {
+  overflow-wrap: anywhere;
+}
+
+@media (min-width: 760px) and (max-width: 1039px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1040px) {
+  .stats-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 820px) {
+  .site-header {
+    position: sticky;
+  }
+
+  .nav-menu {
+    left: 0;
+    right: 0;
+    width: auto;
+    max-height: calc(100dvh - 6rem);
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 990px) {
+  h1,
+  h2,
+  .stat-card strong {
+    font-size: var(--font-size-heading-secondary);
+  }
+}
+
+@media (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  .stat-card strong {
+    font-size: var(--font-size-heading-mobile);
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (max-width: 640px) {
+
+  .section {
+    padding-block: clamp(2.75rem, 10vw, 4rem);
+  }
+
+  .hero-card__body,
+  .project-card__content,
+  .skill-card,
+  .demo-card,
+  .contact-card,
+  .cta-panel,
+  .banner-demo,
+  .footer-demo-panel,
+  .stat-card,
+  .timeline-list article {
+    padding: var(--space-4);
+  }
+
+  .button-group {
+    width: 100%;
+  }
+
+  .button-group .btn,
+  .banner-demo .btn,
+  .cta-panel .btn {
+    width: 100%;
+  }
+
+
+
+  .portfolio-form {
+    padding: var(--space-4);
+  }
+
+  .contact-layout {
+    gap: var(--space-5);
+  }
+
+  .footer-grid {
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-links a {
+    padding-inline: var(--space-2);
+  }
+
+  /* Mobile-first responsive table: turns each row into a readable card. */
+  .table-wrap {
+    overflow-x: visible;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .info-table,
+  .info-table caption,
+  .info-table tbody,
+  .info-table tr,
+  .info-table th,
+  .info-table td {
+    display: block;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .info-table {
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  .info-table caption {
+    margin-bottom: var(--space-3);
+    padding: 0;
+  }
+
+  .info-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .info-table tbody tr {
+    margin-bottom: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background: var(--color-white);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+
+  .info-table tbody th,
+  .info-table tbody td {
+    border-top: 0;
+    padding: var(--space-3) var(--space-4);
+  }
+
+  .info-table tbody th {
+    background: var(--color-primary-900);
+    color: var(--color-white);
+  }
+
+  .info-table tbody td {
+    display: grid;
+    grid-template-columns: minmax(7rem, 38%) minmax(0, 1fr);
+    gap: var(--space-3);
+    align-items: start;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .info-table tbody td::before {
+    content: attr(data-label);
+    color: var(--color-primary-900);
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-mark {
+    width: 2.35rem;
+    height: 2.35rem;
+    flex: 0 0 auto;
+  }
+
+  .navbar {
+    min-height: 4.25rem;
+    gap: var(--space-2);
+  }
+
+  .nav-menu {
+    inset-block-start: 4.25rem;
+  }
+
+  .nav-menu a,
+  .secondary-nav a,
+  .footer-links a {
+    min-height: 2.75rem;
+  }
+
+  .hero-copy {
+    font-size: var(--font-size-body);
+  }
+
+  .project-card img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .info-table tbody td {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

@@ -1,0 +1,24 @@
+@use './maps' as *;
+@use './mixins' as *;
+
+// Interview note:
+// This SCSS file demonstrates how the current CSS could be extended using maps,
+// @use imports, mixins, and reusable responsive patterns.
+
+.example-responsive-grid {
+  display: grid;
+  gap: 1.5rem;
+
+  @include respond(md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include respond(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.example-card {
+  @include card-shell;
+  padding: 1.5rem;
+}

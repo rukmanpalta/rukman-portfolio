@@ -1,0 +1,138 @@
+/* Portfolio integration styles only. Original Backroads styles remain untouched. */
+.portfolio-back-link {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 999;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background: #102a42;
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(16, 42, 66, 0.25);
+}
+.portfolio-back-link:hover,
+.portfolio-back-link:focus {
+  background: #2caeba;
+  color: #fff;
+}
+html,
+body {
+  max-width: 100%;
+  overflow-x: clip;
+}
+img {
+  max-width: 100%;
+}
+.form-status {
+  flex-basis: 100%;
+  margin-top: 0.75rem;
+  min-height: 1.5rem;
+  font-weight: 700;
+  color: #102a42;
+}
+.form-status.is-success {
+  color: #2caeba;
+}
+.form-status.is-error {
+  color: #9a3412;
+}
+.contact-form .form-control {
+  min-width: 0;
+}
+
+.contact-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 34rem;
+}
+.contact-form .btn-submit,
+.contact-form .form-status {
+  margin-left: 0;
+  grid-column: 1 / -1;
+}
+@media screen and (min-width: 768px) {
+  .contact-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .hero-banner { width: min(100%, 34rem); padding-inline: 1rem; }
+  .hero-btn,
+  .btn-submit { width: 100%; text-align: center; }
+  .nav-header { padding-inline: 1rem; }
+  .nav-link { padding-inline: 1rem; }
+  .tour-info,
+  .service-info { padding-inline: 1rem; }
+  .tour-footer { gap: 0.75rem; }
+  .contact-form { display: grid; gap: 0.75rem; max-width: 100%; }
+  .btn-submit { margin-left: 0; }
+  .footer-links,
+  .footer-icons { gap: 0.75rem; }
+  .footer-link,
+  .footer-icon { padding-right: 0; }
+  .portfolio-back-link {
+    top: auto;
+    bottom: 1rem;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    max-width: calc(100vw - 2rem);
+    justify-content: center;
+    font-size: 0.78rem;
+    padding: 0.55rem 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+
+/* Portfolio typography requirement
+   Large screens: main headings 2rem / 32px
+   Under 990px: main headings 1.25rem / 20px
+   Under 767px: main headings 1.125rem / 18px
+   Paragraphs: 1.125rem / 18px
+   Kept separate from original styles so animations/cards/effects stay intact. */
+:root {
+  --portfolio-p-size: 1.125rem;
+  --portfolio-heading-size: 2rem;
+  --portfolio-heading-desktop: 1.25rem;
+  --portfolio-heading-mobile: 1.125rem;
+}
+
+p {
+  font-size: var(--portfolio-p-size);
+}
+
+h1,
+h2,
+.section-title h3,
+.hero-banner h1,
+.banner h1 {
+  font-size: var(--portfolio-heading-size);
+}
+
+@media screen and (max-width: 990px) {
+  h1,
+  h2,
+  .section-title h3,
+  .hero-banner h1,
+  .banner h1 {
+    font-size: var(--portfolio-heading-desktop);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  h1,
+  h2,
+  h3,
+  .section-title h3,
+  .hero-banner h1,
+  .banner h1 {
+    font-size: var(--portfolio-heading-mobile);
+  }
+}
