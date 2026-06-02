@@ -11,7 +11,11 @@
   width: 2.75rem;
   height: 2.75rem;
   border-radius: 40% 60% 55% 45%;
-  background: linear-gradient(135deg, var(--color-accent-500), var(--color-teal-700));
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-500),
+    var(--color-teal-700)
+  );
   color: var(--color-white);
   font-weight: 900;
   letter-spacing: -0.04em;
@@ -53,7 +57,11 @@
   font-weight: 800;
   line-height: 1;
   cursor: pointer;
-  transition: transform var(--transition), background var(--transition), color var(--transition), border-color var(--transition);
+  transition:
+    transform var(--transition),
+    background var(--transition),
+    color var(--transition),
+    border-color var(--transition);
 }
 
 .btn:hover {
@@ -196,6 +204,14 @@
   font-size: 1.25rem;
 }
 
+.contact-card address {
+  display: block;
+  margin-top: var(--space-2);
+  color: var(--color-accent-700);
+  font-weight: 800;
+  font-style: normal;
+}
+
 .check-list,
 .feature-list {
   list-style: none;
@@ -213,7 +229,7 @@
 
 .check-list li::before,
 .feature-list li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: var(--color-teal-700);
@@ -291,7 +307,7 @@
   transition: transform var(--transition);
 }
 
-.accordion-trigger[aria-expanded='true'] i {
+.accordion-trigger[aria-expanded="true"] i {
   transform: rotate(180deg);
 }
 
@@ -308,7 +324,11 @@
   display: grid;
   gap: var(--space-4);
   align-items: center;
-  background: linear-gradient(135deg, var(--color-primary-900), var(--color-primary-700));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary-900),
+    var(--color-primary-700)
+  );
   color: var(--color-white);
 }
 
@@ -358,7 +378,6 @@
   }
 }
 
-
 .contact-layout {
   display: grid;
   gap: var(--space-6);
@@ -398,7 +417,9 @@
   font: inherit;
   font-weight: 500;
   background: var(--color-white);
-  transition: border-color var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
 }
 
 .form-field textarea {
