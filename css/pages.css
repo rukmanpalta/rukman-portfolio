@@ -1,6 +1,10 @@
 .page-hero {
   background:
-    radial-gradient(circle at top right, rgba(249, 115, 22, 0.16), transparent 32rem),
+    radial-gradient(
+      circle at top right,
+      rgba(249, 115, 22, 0.16),
+      transparent 32rem
+    ),
     linear-gradient(180deg, var(--color-primary-050), var(--color-white));
 }
 
@@ -24,7 +28,9 @@
 .contact-card,
 .project-card,
 .stat-card {
-  transition: transform var(--transition), box-shadow var(--transition);
+  transition:
+    transform var(--transition),
+    box-shadow var(--transition);
 }
 
 .cards-demo-grid .demo-card:hover,
@@ -42,6 +48,15 @@
 
 .cta-panel {
   background: var(--color-primary-050);
+}
+
+.section--dark .cta-panel {
+  background: transparent;
+  text-align: center;
+}
+
+.section--dark .cta-panel .btn {
+  margin-inline: 0.5rem;
 }
 
 @media (prefers-reduced-motion: reduce) {
