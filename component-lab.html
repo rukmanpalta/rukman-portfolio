@@ -1,30 +1,61 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Reusable frontend component lab with navigation, banner, cards, accordion, table, footer, and CTA patterns." />
+    <meta
+      name="description"
+      content="Frontend pattern showcase for responsive cards, multi-column layouts, tabs, accordions, and tables built for enterprise-friendly UI."
+    />
     <title>Component Lab | Rukman Palta</title>
-    <link rel="stylesheet" href="./fontawesome-free-5.12.1-web/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.12.1-web/css/all.min.css"
+    />
     <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      .tab-panel[hidden] {
+        display: none;
+      }
+      .tab-trigger[aria-selected="true"] {
+        background: var(--color-primary-900);
+        color: var(--color-white);
+        border-color: var(--color-primary-900);
+      }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
     <header class="site-header">
       <nav class="navbar" aria-label="Main navigation">
-        <a class="brand" href="index.html"><span class="brand-mark">RP</span><span class="brand-text">Rukman</span></a>
-        <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false"><i class="fas fa-bars" aria-hidden="true"></i></button>
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">RP</span
+          ><span class="brand-text">Rukman</span></a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
         <ul class="nav-menu" id="primary-navigation">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
-          <li><a href="component-lab.html" aria-current="page">Component Lab</a></li>
+          <li>
+            <a href="component-lab.html" aria-current="page">Component Lab</a>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <nav class="secondary-nav" aria-label="Component page navigation">
         <a href="#banner">Banner</a>
         <a href="#cards">Cards</a>
+        <a href="#layouts">Layouts</a>
+        <a href="#tabs">Tabs</a>
         <a href="#accordion">Accordion</a>
         <a href="#table">Table</a>
         <a href="#footer-demo">Footer</a>
@@ -35,10 +66,14 @@
       <section class="page-hero section">
         <div class="section-center narrow">
           <p class="eyebrow">Component Lab</p>
-          <h1>Reusable website sections built first in HTML, CSS, and JavaScript.</h1>
+          <h1>
+            Reusable UI sections for responsive, accessible frontend work.
+          </h1>
           <p>
-            This page is designed to show interview-ready understanding of common UI components.
-            Each block can later become a React component with props, state, and reusable data arrays.
+            These patterns reflect my experience building scalable AEM and React
+            page layouts for enterprise brands. The examples show responsive
+            cards, tables, multi-column layouts, tabs, and accessible accordion
+            behavior.
           </p>
         </div>
       </section>
@@ -47,13 +82,16 @@
         <div class="section-center">
           <div class="banner-demo">
             <div>
-              <span class="tag">Banner Component</span>
-              <h2>Build once. Reuse across pages.</h2>
+              <span class="tag">Banner</span>
+              <h2>Global-ready page hero section</h2>
               <p>
-                A hero/banner component usually receives title, subtitle, CTA labels, and optional media as props in React.
+                A hero section highlights brand messaging, CTA focus, and
+                responsive layout for enterprise landing pages.
               </p>
             </div>
-            <a class="btn btn--primary" href="projects.html">Explore Projects</a>
+            <a class="btn btn--primary" href="projects.html"
+              >Explore Projects</a
+            >
           </div>
         </div>
       </section>
@@ -62,24 +100,138 @@
         <div class="section-center">
           <div class="section-heading">
             <p class="eyebrow">Cards</p>
-            <h2>Reusable card pattern</h2>
+            <h2>Flexible content cards</h2>
           </div>
           <div class="cards-demo-grid">
             <article class="demo-card">
               <i class="fas fa-mobile-alt" aria-hidden="true"></i>
               <h3>Responsive Layout</h3>
-              <p>Reusable cards can represent services, projects, articles, products, or dashboard tiles.</p>
+              <p>
+                Cards work well for services, projects, articles, products, or
+                dashboard highlights.
+              </p>
             </article>
             <article class="demo-card">
               <i class="fas fa-universal-access" aria-hidden="true"></i>
               <h3>Accessible Markup</h3>
-              <p>Use semantic headings, readable text, visible focus states, and meaningful link text.</p>
+              <p>
+                Use semantic headings, readable text, visible focus states, and
+                meaningful link text.
+              </p>
             </article>
             <article class="demo-card">
               <i class="fas fa-code-branch" aria-hidden="true"></i>
-              <h3>React-ready Data</h3>
-              <p>In React, this grid could come from an array mapped into repeated Card components.</p>
+              <h3>Data-driven layout</h3>
+              <p>
+                This grid is ideal for repeated content blocks built from the
+                same data structure.
+              </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="layouts">
+        <div class="section-center">
+          <div class="section-heading">
+            <p class="eyebrow">Layouts</p>
+            <h2>Two- and three-column page sections</h2>
+          </div>
+          <div class="cards-demo-grid">
+            <article class="demo-card">
+              <i class="fas fa-columns" aria-hidden="true"></i>
+              <h3>Two-column layout</h3>
+              <p>
+                Designed content and visuals side-by-side for clear, responsive
+                information hierarchy.
+              </p>
+            </article>
+            <article class="demo-card">
+              <i class="fas fa-th-large" aria-hidden="true"></i>
+              <h3>Three-column layout</h3>
+              <p>
+                Structured feature and metric sections that scale cleanly across
+                desktop and mobile.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="tabs">
+        <div class="section-center narrow">
+          <div class="section-heading">
+            <p class="eyebrow">Tabs</p>
+            <h2>Tabbed interface for structured content</h2>
+          </div>
+          <div class="tabs" data-tabs>
+            <div class="button-group" role="tablist" aria-label="Demo tabs">
+              <button
+                class="btn btn--secondary tab-trigger"
+                role="tab"
+                aria-selected="true"
+                aria-controls="tab-panel-1"
+                id="tab-1"
+                type="button"
+              >
+                Overview
+              </button>
+              <button
+                class="btn btn--secondary tab-trigger"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-panel-2"
+                id="tab-2"
+                type="button"
+              >
+                Details
+              </button>
+              <button
+                class="btn btn--secondary tab-trigger"
+                role="tab"
+                aria-selected="false"
+                aria-controls="tab-panel-3"
+                id="tab-3"
+                type="button"
+              >
+                Experience
+              </button>
+            </div>
+            <div
+              class="tab-panel"
+              id="tab-panel-1"
+              role="tabpanel"
+              aria-labelledby="tab-1"
+            >
+              <p>
+                This tab interface shows how content can be organized into
+                compact, discoverable sections.
+              </p>
+            </div>
+            <div
+              class="tab-panel"
+              id="tab-panel-2"
+              role="tabpanel"
+              aria-labelledby="tab-2"
+              hidden
+            >
+              <p>
+                Tabs are useful for product specs, role details, or feature
+                comparisons without overwhelming the page.
+              </p>
+            </div>
+            <div
+              class="tab-panel"
+              id="tab-panel-3"
+              role="tabpanel"
+              aria-labelledby="tab-3"
+              hidden
+            >
+              <p>
+                Tabbed layouts are common in enterprise dashboards,
+                documentation, and application settings panels.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -93,35 +245,81 @@
           <div class="accordion" data-accordion>
             <article class="accordion-item">
               <h3>
-                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-1" id="trigger-1">
+                <button
+                  class="accordion-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="panel-1"
+                  id="trigger-1"
+                >
                   What would this become in React?
                   <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
               </h3>
-              <div class="accordion-panel" id="panel-1" role="region" aria-labelledby="trigger-1" hidden>
-                <p>A React Accordion can track open/closed state with <code>useState</code> and render each item from an array.</p>
+              <div
+                class="accordion-panel"
+                id="panel-1"
+                role="region"
+                aria-labelledby="trigger-1"
+                hidden
+              >
+                <p>
+                  A React Accordion can track open/closed state with
+                  <code>useState</code> and render each item from an array.
+                </p>
               </div>
             </article>
             <article class="accordion-item">
               <h3>
-                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-2" id="trigger-2">
+                <button
+                  class="accordion-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="panel-2"
+                  id="trigger-2"
+                >
                   What accessibility details matter?
                   <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
               </h3>
-              <div class="accordion-panel" id="panel-2" role="region" aria-labelledby="trigger-2" hidden>
-                <p>Use a real button, update <code>aria-expanded</code>, connect controls with <code>aria-controls</code>, and keep keyboard behavior natural.</p>
+              <div
+                class="accordion-panel"
+                id="panel-2"
+                role="region"
+                aria-labelledby="trigger-2"
+                hidden
+              >
+                <p>
+                  Use a real button, update <code>aria-expanded</code>, connect
+                  controls with <code>aria-controls</code>, and keep keyboard
+                  behavior natural.
+                </p>
               </div>
             </article>
             <article class="accordion-item">
               <h3>
-                <button class="accordion-trigger" type="button" aria-expanded="false" aria-controls="panel-3" id="trigger-3">
+                <button
+                  class="accordion-trigger"
+                  type="button"
+                  aria-expanded="false"
+                  aria-controls="panel-3"
+                  id="trigger-3"
+                >
                   Why include this in a portfolio?
                   <i class="fas fa-chevron-down" aria-hidden="true"></i>
                 </button>
               </h3>
-              <div class="accordion-panel" id="panel-3" role="region" aria-labelledby="trigger-3" hidden>
-                <p>Accordions are common in FAQ, product detail, support, and content-heavy enterprise pages.</p>
+              <div
+                class="accordion-panel"
+                id="panel-3"
+                role="region"
+                aria-labelledby="trigger-3"
+                hidden
+              >
+                <p>
+                  Accordions are common in FAQ, product detail, support, and
+                  content-heavy enterprise pages.
+                </p>
               </div>
             </article>
           </div>
@@ -132,38 +330,59 @@
         <div class="section-center">
           <div class="section-heading">
             <p class="eyebrow">Table</p>
-            <h2>Responsive comparison table</h2>
+            <h2>Responsive data table</h2>
           </div>
           <div class="table-wrap">
             <table class="info-table">
-              <caption>Component to React conversion plan</caption>
+              <caption>
+                Pattern mapping for responsive frontend layout work
+              </caption>
               <thead>
                 <tr>
-                  <th scope="col">Component</th>
-                  <th scope="col">Current version</th>
-                  <th scope="col">React version</th>
+                  <th scope="col">Pattern</th>
+                  <th scope="col">HTML / CSS version</th>
+                  <th scope="col">React / AEM version</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">Navbar</th>
-                  <td data-label="Current version">HTML + JS toggle</td>
-                  <td data-label="React version"><code>&lt;Navbar links={links} /&gt;</code></td>
+                  <th scope="row">Two-column layout</th>
+                  <td data-label="HTML / CSS version">
+                    Content and visuals side-by-side using grid.
+                  </td>
+                  <td data-label="React / AEM version">
+                    Layout props, responsive grid classes, or AEM experience
+                    fragments.
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row">Cards</th>
-                  <td data-label="Current version">Repeated article markup</td>
-                  <td data-label="React version"><code>items.map(item =&gt; &lt;Card /&gt;)</code></td>
+                  <th scope="row">Three-column layout</th>
+                  <td data-label="HTML / CSS version">
+                    Feature and metric sections built with repeatable grid
+                    cells.
+                  </td>
+                  <td data-label="React / AEM version">
+                    Mapped content blocks or responsive teaser cards from
+                    reusable data.
+                  </td>
                 </tr>
                 <tr>
                   <th scope="row">Accordion</th>
-                  <td data-label="Current version">Button + hidden panel</td>
-                  <td data-label="React version"><code>useState</code> for active item</td>
+                  <td data-label="HTML / CSS version">
+                    Button + hidden panel with keyboard-friendly toggling.
+                  </td>
+                  <td data-label="React / AEM version">
+                    <code>useState</code> or clientlib JS to manage open state.
+                  </td>
                 </tr>
                 <tr>
-                  <th scope="row">Footer</th>
-                  <td data-label="Current version">Static links</td>
-                  <td data-label="React version">Reusable layout with social links prop</td>
+                  <th scope="row">Tabs</th>
+                  <td data-label="HTML / CSS version">
+                    Button group with panel visibility and ARIA support.
+                  </td>
+                  <td data-label="React / AEM version">
+                    State-driven tab content and conditional rendering.
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -191,8 +410,15 @@
 
     <footer class="footer">
       <div class="section-center footer-grid">
-        <p>&copy; <span id="year"></span> Rukman Palta. Frontend Developer Portfolio.</p>
-        <ul class="footer-links" aria-label="Footer navigation"><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="contact.html">Contact</a></li></ul>
+        <p>
+          &copy; <span id="year"></span> Rukman Palta. Frontend Developer
+          Portfolio.
+        </p>
+        <ul class="footer-links" aria-label="Footer navigation">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </footer>
     <script src="./js/app.js"></script>

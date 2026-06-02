@@ -114,7 +114,9 @@ code {
 
 .info-table th,
 .info-table td {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
 }
 
 @media (min-width: 760px) and (max-width: 1039px) {
@@ -162,7 +164,6 @@ code {
 }
 
 @media (max-width: 640px) {
-
   .section {
     padding-block: clamp(2.75rem, 10vw, 4rem);
   }
@@ -189,8 +190,6 @@ code {
   .cta-panel .btn {
     width: 100%;
   }
-
-
 
   .portfolio-form {
     padding: var(--space-4);
