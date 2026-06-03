@@ -191,6 +191,7 @@ code {
   .banner-demo .btn,
   .cta-panel .btn {
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   .portfolio-form {
